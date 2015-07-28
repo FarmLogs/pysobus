@@ -1,0 +1,551 @@
+pgn_id,manufacturer,opcode,source_address,pgn_length_bytes,spn_start_position,spn_bit_length,spn_id,spn_name,spn_description,scale_factor,offset,units
+61184,John Deere,,211,8,1,16,61184.211.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+61184,John Deere,2383,211,8,3,16,61184.211.3.2383,Grain Flow,The current grain flow reading,0.01,0,kg/s
+61184,John Deere,2383,211,8,5,16,61184.211.5.2383,Grain Moisture,The current grain moisture reading,0.01,0,%
+65535,John Deere,,234,8,1,8,65535.234.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+65535,John Deere,17,234,8,7,8,65535.234.7.17,Header Identifier,Indicates which header is attached,1,0,binary
+65535,John Deere,,23,8,1,8,65535.23.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+65535,John Deere,24,23,8,2,16,65535.23.2.24,Header width in use,,1,0,mm
+65535,John Deere,24,23,8,4,16,65535.23.4.24,Header actual width,,1,0,mm
+65535,John Deere,24,23,8,6,8,65535.23.6.24,Header number of rows in cut,,1,0,count
+65535,John Deere,24,23,8,7,8,65535.23.7.24,Header number of rows,,1,0,count
+65535,John Deere,24,23,8,8,8,65535.23.8.24,Header row spacing,,1,0,cm
+65535,John Deere,,242,8,1,8,65535.242.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+65535,John Deere,24,242,8,2,16,65535.242.2.24,Header width in use,,1,0,mm
+65535,John Deere,24,242,8,4,16,65535.242.4.24,Header actual width,,1,0,mm
+65535,John Deere,24,242,8,6,8,65535.242.6.24,Header number of rows in cut,,1,0,count
+65535,John Deere,24,242,8,7,8,65535.242.7.24,Header number of rows,,1,0,count
+65535,John Deere,24,242,8,8,8,65535.242.8.24,Header row spacing,,1,0,cm
+65535,John Deere,,211,8,1,8,65535.211.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+65535,John Deere,24,211,8,2,16,65535.211.2.24,Header width in use,,1,0,mm
+65535,John Deere,24,211,8,4,16,65535.211.4.24,Header actual width,,1,0,mm
+65535,John Deere,24,211,8,6,8,65535.211.6.24,Header number of rows in cut,,1,0,count
+65535,John Deere,24,211,8,7,8,65535.211.7.24,Header number of rows,,1,0,count
+65535,John Deere,24,211,8,8,8,65535.211.8.24,Header row spacing,,1,0,cm
+65534,John Deere,,244,8,1,8,65534.244.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+65534,John Deere,69,244,8,2,8,65534.244.2.69,Unloading Auger Position,How far out the unloading auger is; a bigger number meaning farther out,1,0,degrees
+65534,John Deere,69,244,8,4.1,1,65534.244.4.1.69,Unloading Auger On Y/N,Whether or not the unloader auger is on,1,0,bit
+65534,John Deere,69,244,8,8.1,1,65534.244.8.1.69,Unloading Auger Deployment Motor On Y/N,Whether or not what deploys/retracts the unloading auger is engaged,1,0,bit
+65534,John Deere,69,244,8,8.2,1,65534.244.8.2.69,Unloading Auger Deployment Motor Off Y/N,Seems to just be the opposite of the preceding bit,1,0,bit
+65475,Case IH,,164,8,1,16,65475.164.1.,Moisture Content,,1,0,
+65475,Case IH,,164,8,3,16,65475.164.3.,Flow Rate,Crop mass flow (0.01 gram per second per bit),0.001,0,kg/s
+65475,Case IH,,164,8,5,16,65475.164.5.,Yield sensor net mv,,1,0,
+65475,Case IH,,164,8,7,8,65475.164.7.,Mean Edge In Scan,,1,0,
+65475,Case IH,,164,8,8,8,65475.164.8.,PF State,,1,0,
+65385,Case IH,,144,8,1,16,65385.144.1.,Grain Flow,Crop mass flow (0.01 gram per second per bit),0.001,0,kg/s
+65385,Case IH,,144,8,3,16,65385.144.3.,Crop Type,Crop ID,1,0,
+65385,Case IH,,144,8,5,16,65385.144.5.,Grain Moisture,Crop moisture content (0.01% per bit),0.01,0,%
+65385,Case IH,,144,8,7,16,65385.144.7.,Work Width,Working width (mm),1,0,mm
+65488,Case IH,,240,8,1,16,65488.240.1.,Grain Flow,Crop mass flow (0.01 gram per second per bit),0.001,0,kg/s
+65377,Case IH,,39,8,1,16,65377.39.1.,Reel Horizontal Position,1.0 mm/bit gain; -1000.0 mm offset,1,"-1,000",mm
+65377,Case IH,,39,8,3,8,65377.39.3.,Header Type,0 = not defined; 1 = Corn Header; 2 = Grain Header; 3 = Pick-up Header; 4 = Draper Header; 5 = Programmable Header; 6 = Default Header,1,0,
+65377,Case IH,,39,8,7,16,65377.39.7.,Engine Oil Pressure,0.05 bar/bit gain; 0 bar offset,0.05,0,bar
+65380,Case IH,,39,8,1,16,65380.39.1.,Reel Speed,1 rpm/bit gain; 0 offset,1,0,rpm
+65380,Case IH,,39,8,3,16,65380.39.3.,Ground Speed,0.1 kph/bit gain; 0 offset,0.1,0,kph
+65380,Case IH,,39,8,5,16,65380.39.5.,Chopper Speed,1 rpm/bit gain; 0 offset,1,0,rpm
+65380,Case IH,,39,8,7,16,65380.39.7.,Straw Walker Speed,1 rpm/bit gain; 0 offset,1,0,rpm
+65381,Case IH,,39,8,1,16,65381.39.1.,Engine Speed,1 rpm/bit gain; 0 offset,1,0,rpm
+65381,Case IH,,39,8,3,16,65381.39.3.,Drum/Rotor Speed,1 rpm/bit gain; 0 offset,1,0,rpm
+65381,Case IH,,39,8,8,8,65381.39.8.,Coolant Temperature Percentage,0.4%/bit gain; 0% offset,0.4,0,%
+65382,Case IH,,39,8,1,8,65382.39.1.,Left Walker/Rotor Loss,0.4%/bit gain; 0% offset; byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available,0.4,0,%
+65382,Case IH,,39,8,2,8,65382.39.2.,Right Walker/Rotor Loss,0.4%/bit gain; 0% offset; byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available,0.4,0,%
+65382,Case IH,,39,8,3,8,65382.39.3.,Engine Oil Temperature,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available,1,-40,degrees Celsius
+65382,Case IH,,39,8,4,8,65382.39.4.,Gearbox Clutch Temperature,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available,1,-40,degrees Celsius
+65382,Case IH,,39,8,5,8,65382.39.5.,Coolant Temperature,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available,1,-40,degrees Celsius
+65382,Case IH,,39,8,6,8,65382.39.6.,Fuel Level,0.4%/bit gain; 0% offset; byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available,0.4,0,%
+65382,Case IH,,39,8,7,8,65382.39.7.,Grain Bin Full,0.4%/bit gain; 0% offset; byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available,0.4,0,%
+65382,Case IH,,39,8,8,8,65382.39.8.,Engine Load,1%/bit gain; 0% offset; Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available,1,0,%
+65313,Case IH,,136,8,1.1,2,65313.136.1.1.,Unload Auger Engage,Switch Off = 00; Switch On = 01; Defect = 10; Not Available = 11,1,0,
+65313,Case IH,,136,8,1.3,2,65313.136.1.3.,Unload Tube Swing In,Switch Off = 00; Switch On = 01; Defect = 10; Not Available = 11,1,0,
+65313,Case IH,,136,8,1.5,2,65313.136.1.5.,Unload Tube Swing Out,Switch Off = 00; Switch On = 01; Defect = 10; Not Available = 11,1,0,
+65313,Case IH,,136,8,1.7,2,65313.136.1.7.,Resume,Switch Off = 00; Switch On = 01; Defect = 10; Not Available = 11,1,0,
+65314,Case IH,,136,8,1,8,65314.136.1.,Reel Speed Potentiometer Value,0.4%/bit gain; 0% offset; byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available,0.4,0,%
+65314,Case IH,,136,8,2,8,65314.136.2.,Header Speed Potentiometer Value,0.4%/bit gain; 0% offset; byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available,0.4,0,%
+65314,Case IH,,136,8,3,8,65314.136.3.,Throttle Potentiometer Value,0.4%/bit gain; 0% offset; byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available,0.4,0,%
+65492,Case IH,,144,8,1.1,4,65492.144.1.1.,Date - Month,Current Date Month,1,0,
+65492,Case IH,,144,8,1.5,12,65492.144.1.5.,Date - Year,Current Date Year,1,0,
+65492,Case IH,,144,8,3.1,6,65492.144.3.1.,Time - Minute,Current Time Minutes,1,0,
+65492,Case IH,,144,8,3.7,5,65492.144.3.7.,Time - Hour,Current Time Hours,1,0,
+65492,Case IH,,144,8,4.4,5,65492.144.4.4.,Time - Day,Current Date Day,1,0,
+65492,Case IH,,144,8,5.1,1,65492.144.5.1.,Clock Running,-0- Clock Not Running; -1- Clock Running,1,0,
+65492,Case IH,,144,8,6.3,6,65492.144.6.3.,Time - Seconds,Current Time Seconds,1,0,
+65412,Case IH,,148,8,2.1,1,65412.148.2.1.,Rigid Header,Rigid (grain) header installed; 0 = Installed; 1 = Not Installed,1,0,
+65412,Case IH,,148,8,2.2,1,65412.148.2.2.,Flex Header,Flex type header installed2; 0 = Installed; 1 = Not Installed,1,0,
+65412,Case IH,,148,8,2.3,1,65412.148.2.3.,Pick-Up Header,Pick-Up type header installed; 0 = Installed; 1 = Not Installed,1,0,
+65412,Case IH,,148,8,2.4,1,65412.148.2.4.,Corn Header,Corn header installed; 0 = Installed; 1 = Not Installed,1,0,
+65412,Case IH,,148,8,2.5,1,65412.148.2.5.,Distance Sensors,Distance sensors (for Autofloat Mode) installed; 0 = Installed; 1 = Not Installed,1,0,
+65412,Case IH,,148,8,2.6,1,65412.148.2.6.,Lateral Tilt,Lateral Tilt cylinder/valves installed; 0 = Installed; 1 = Not Installed,1,0,
+65412,Case IH,,148,8,2.7,1,65412.148.2.7.,HD Lift Cylinders,Heavy Duty lift cylinders installed; 0 = Installed; 1 = Not Installed,1,0,
+65412,Case IH,,148,8,2.8,1,65412.148.2.8.,HD Tilt Cylinder(s),Heavy Duty tilt cylinder(s) installed; 0 = Installed; 1 = Not Installed,1,0,
+65412,Case IH,,148,8,3,8,65412.148.3.,Header Width,Width of the installed header (as configured by the operator); 15cm /bit gain; 0cm offset,15,0,cm
+65412,Case IH,,148,8,4,8,65412.148.4.,Ground Speed,Actual Ground Speed of the combine; 0.2km/h /bit gain; 0km/h offset; 0 to 250; 252 (0xFC) = Not Calibrated; 254 (0xFE) = Error; 255 (0xFF) = Not Available,0.2,0,km/h
+65330,Case IH,,0,8,1.1,2,65330.0.1.1.,Ignition key switch position,terminal 15; 00 = Off; 01 = On; 10 = reserved; 11 = not available,1,0,
+65330,Case IH,,0,8,1.3,2,65330.0.1.3.,Cold start heater status, 00 = Off; 01 = On; 10 = reserved; 11 = not available,1,0,
+65330,Case IH,,0,8,1.5,2,65330.0.1.5.,Engine Overeheat,00 = False; 01 = True; 10 = reserved; 11 = not available,1,0,
+65330,Case IH,,0,8,1.7,2,65330.0.1.7.,Engine Overspeed,00 = False; 01 = True; 10 = reserved; 11 = not available,1,0,
+65330,Case IH,,0,8,3,16,65330.0.3.,Actual Engine Speed,0 to 64255 (FAFF16 ); 0.125 rpm per bit; 0 to 8031.875 rpm,0.125,0,
+65330,Case IH,,0,8,5,16,65330.0.5.,Actual Engine Torque,0 to 64000 (FA0016 ); 1/256 % per bit; -125 to 125 %; -125% offset,0.00390625,-125,%
+65332,Case IH,,0,8,1,8,65332.0.1.,Engine coolant temperature,0 to 250 (FA16 ); 1 degree C per bit; -40 C offset; range -40 to 210 C ,1,-40,degrees Celsius
+65332,Case IH,,0,8,2,8,65332.0.2.,Fuel temperature,0 to 250 (FA16 ); 1 degree C per bit; -40 C offset; range -40 to 210 C ,1,-40,degrees Celsius
+65332,Case IH,,0,8,3,8,65332.0.3.,Atmospheric pressure,0 to 250 (FA16 ); 1 degree C per bit; -40 C offset; range -40 to 210 C ,1,-40,degrees Celsius
+65332,Case IH,,0,8,4,16,65332.0.4.,Electric potential,0 to 64215 (FAD716 ); 50 mV per bit; 0 mV offset; 0 to 3212.75 mV range,50,0,mV
+65226,Case IH,,0,8,1.1,4,65226.0.1.1.,Diagnostic Trouble Code (DTC) number,Diagnostic Trouble Code (DTC) number,1,0,
+65226,Case IH,,0,8,1.4,4,65226.0.1.4.,Number of Diagnostic Trouble Codes (DTCs),Number of Diagnostic Trouble Codes (DTCs),1,0,
+65226,Case IH,,0,8,2,8,65226.0.2.,DTC warning lamp,1100 0000 = no lamp; 1100 0001 = protect lamp; 1100 0100 = amber warning lamp; 1101 0000 = red stop lamp,1,0,
+65226,Case IH,,0,8,3.1,2,65226.0.3.1.,DTC storage state,00 = Passive; 01 = Active; 10 = reserved; 11 = not available,1,0,
+65226,Case IH,,0,8,3.3,5,65226.0.3.3.,Failure Mode Identifier,Failure Mode Identifier,1,0,
+65226,Case IH,,0,8,4.1,7,65226.0.4.1.,DTC Occurrence Counter,DTC Occurrence Counter,1,0,
+65226,Case IH,,0,8,5,16,65226.0.5.,Suspect Parameter Number (SPN),Suspect Parameter Number (SPN),1,0,
+65308,Case IH,,0,8,1,16,65308.0.1.,GOV Engine Speed,Word value: 0 to 64255; 64024 (FE0016) = error; 65280 (FE0016) = not available; Scaling: 0.125rpm/bit; 0rpm offset; Range: 0 to 8031.875rpm,0.125,0,rpm
+65308,Case IH,,0,8,4,8,65308.0.4.,Percent Torque of Peak,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 1%/bit gain; -125% offset; Range: -125% to 125%,1,-125,%
+65309,Case IH,,0,8,1,16,65309.0.1.,Fuel Rate,Word value: 0 to 64250; Scaling: 0.05 Liter/hr/bit; Range: 0 to 3212.75 Liter/hr,0.05,0,Liter/hr
+65309,Case IH,,0,8,3,8,65309.0.3.,Intake Manifold Temperature,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 1 deg C / bit; -40C offset; Range: -40C to 210C,1,-40,degrees Celsius
+65309,Case IH,,0,8,4,8,65309.0.4.,Engine Oil Pressure,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 4 kPa / bit; 0kPa offset; Range: 0 to 1000 kPa,4,0,kPa
+65309,Case IH,,0,8,5,8,65309.0.5.,Engine Coolant Temperature,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 1 deg C / bit; -40C offset; Range: -40C to 210C,1,-40,degrees Celsius
+65296,Case IH,,140,8,1.1,1,65296.140.1.1.,Drum,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,1.2,1,65296.140.1.2.,Beater,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,1.3,1,65296.140.1.3.,Rotary Separator,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,1.4,1,65296.140.1.4.,Cleaning Fan,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,1.5,1,65296.140.1.5.,Returns,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,1.6,1,65296.140.1.6.,Grain Elevator,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,1.7,1,65296.140.1.7.,Straw Walkers,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,1.8,1,65296.140.1.8.,Straw Chopper,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,2.2,1,65296.140.2.2.,Grain Tank Full,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,2.3,1,65296.140.2.3.,Unload Auger Out,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,2.4,1,65296.140.2.4.,Grainbin Covers,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,2.5,1,65296.140.2.5.,Parking Brake,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,2.6,1,65296.140.2.6.,Stone Trap,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,2.7,1,65296.140.2.7.,Header Speed,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,2.8,1,65296.140.2.8.,Rotor,ON/OFF operation of the SSM Lamps; 0 = not active; 1 = active,1,0,
+65296,Case IH,,140,8,3.1,1,65296.140.3.1.,Drum,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,3.2,1,65296.140.3.2.,Beater,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,3.3,1,65296.140.3.3.,Rotary Separator,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,3.4,1,65296.140.3.4.,Cleaning Fan,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,3.5,1,65296.140.3.5.,Returns,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,3.6,1,65296.140.3.6.,Grain Elevator,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,3.7,1,65296.140.3.7.,Straw Walkers,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,3.8,1,65296.140.3.8.,Straw Chopper,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,4.2,1,65296.140.4.2.,Grain Tank Full,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,4.3,1,65296.140.4.3.,Unload Auger Out,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,4.4,1,65296.140.4.4.,Grainbin Covers,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,4.5,1,65296.140.4.5.,Parking Brake,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,4.6,1,65296.140.4.6.,Stone Trap,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,4.7,1,65296.140.4.7.,Header Speed,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,4.8,1,65296.140.4.8.,Rotor,FLASHING of the SSM Lamps; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,5,8,65296.140.5.,Coolant Temperature,Byte value: 0 to 100; 254 = error; Scaling: 1%/bit gain; 0% offset; Range: 0% to 100%,1,0,%
+65296,Case IH,,140,8,6,8,65296.140.6.,Fuel Level,Byte value: 0 to 100; 254 = error; Scaling: 1%/bit gain; 0% offset; Range: 0% to 100%,1,0,%
+65296,Case IH,,140,8,7.1,1,65296.140.7.1.,Coolant Temperature,flashing of the SSM Bargraphs; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,7.2,2,65296.140.7.2.,Fuel Level,flashing of the SSM Bargraphs; 0 = solid ; 1 = flash,1,0,
+65296,Case IH,,140,8,8,8,65296.140.8.,Backlighting Intensity,Byte value: 0 to 100; 254 = error; Scaling: 1%/bit gain; 0% offset; Range: 0% to 100%,1,0,%
+65436,Case IH,,204,8,1,8,65436.204.1.,Status GrainCam DLL,Value 0 = Not used; Value 1 = IDLE; Value 2 = CALIBRATING; Value 3 = CALIBRATED; Value 4 = WAITING FOR SAMPLE; Value 5 = SAMPLE AVAILABLE; Value 6 = ANALYSIS SSTARTED; Value 127 = UNDEFINED STATUS,1,0,
+65348,Case IH,,128,8,1,16,65348.128.1.,Cleaning Fan Speed,Word value: 0 to 10000; 64512(0FC0016) = not calibrated; 65024(0FE0016) = error; 65280(0FF0016) = not available; Scaling: 1 rpm/bit gain; 0 offset; Range: 0 to 10000 rpm,1,0,rpm
+65348,Case IH,,128,8,3,16,65348.128.3.,Feeder Speed,Word value: 0 to 10000; 64512(0FC0016) = not calibrated; 65024(0FE0016) = error; 65280(0FF0016) = not available; Scaling: 1 rpm/bit gain; 0 offset; Range: 0 to 10000 rpm,1,0,rpm
+65348,Case IH,,128,8,5,16,65348.128.5.,Left Returns Speed,Word value: 0 to 10000; 64512(0FC0016) = not calibrated; 65024(0FE0016) = error; 65280(0FF0016) = not available; Scaling: 1 rpm/bit gain; 0 offset; Range: 0 to 10000 rpm,1,0,rpm
+65348,Case IH,,128,8,7,16,65348.128.7.,Clean Grain Elevator Speed,Word value: 0 to 10000; 64512(0FC0016) = not calibrated; 65024(0FE0016) = error; 65280(0FF0016) = not available; Scaling: 1 rpm/bit gain; 0 offset; Range: 0 to 10000 rpm,1,0,rpm
+65349,Case IH,,128,8,1,16,65349.128.1.,Rotary Separator Speed,Word value: 0 to 10000; 64512(0FC0016) = not calibrated; 65024(0FE0016) = error; 65280(0FF0016) = not available; Scaling: 1 rpm/bit gain; 0 offset; Range: 0 to 10000 rpm,1,0,rpm
+65349,Case IH,,128,8,3,16,65349.128.3.,Right Returns Speed,Word value: 0 to 10000; 64512(0FC0016) = not calibrated; 65024(0FE0016) = error; 65280(0FF0016) = not available; Scaling: 1 rpm/bit gain; 0 offset; Range: 0 to 10000 rpm,1,0,rpm
+65349,Case IH,,128,8,5,8,65349.128.5.,Returns Volume,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 0.4%/bit gain; 0% offset; Range: 0% to 100%,0.4,0,%
+65349,Case IH,,128,8,6,8,65349.128.6.,Hightest Active Alarm for HUD,Byte value: 0 to 3; Scaling: 1 alarm priority /bit gain; Range: 0 to 3,1,0,
+65350,Case IH,,128,8,1,8,65350.128.1.,Sieves Loss,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 0.4%/bit gain; 0% offset; Range: 0% to 100%,0.4,0,%
+65350,Case IH,,128,8,2,8,65350.128.2.,Spare Loss,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 0.4%/bit gain; 0% offset; Range: 0% to 100%,0.4,0,%
+65350,Case IH,,128,8,3,8,65350.128.3.,Gearbox / PTO Temperature,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 1 degrees Celsius /bit gain; -40 degrees Celsius offset; Range: -40 to 210 degrees Celsius,1,-40,degrees Celsius
+65350,Case IH,,128,8,4,8,65350.128.4.,Hydrostatic Motor Temperature,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 1 degrees Celsius /bit gain; -40 degrees Celsius offset; Range: -40 to 210 degrees Celsius,1,-40,degrees Celsius
+65350,Case IH,,128,8,5,8,65350.128.5.,Hydrostatic Reservoir Temperature,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 1 degrees Celsius /bit gain; -40 degrees Celsius offset; Range: -40 to 210 degrees Celsius,1,-40,degrees Celsius
+65350,Case IH,,128,8,6,8,65350.128.6.,PTO Lube Pressure,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 0.05 bar/bit gain; 0 bar offset; Range: 0 to 12.5 bar (0 to 181.25 psi),0.05,0,bar
+65350,Case IH,,128,8,7,8,65350.128.7.,Percent Header Ground Pressure,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 0.4%/bit gain; 0% offset; Range: 0% to 100%,0.4,0,%
+65350,Case IH,,128,8,8,8,65350.128.8.,Battery Voltage,Byte value: 0 to 250; 252 = not calibrated; 254 = error; 255 = not available; Scaling: 0.1V/bit gain; 0V offset; Range: 0 volts to 25 volts,0.1,0,volts
+65352,Case IH,,128,8,1,8,65352.128.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+65352,Case IH,0,128,8,2.1,2,65352.128.2.1.0,Stubble Height HHC Status/(RTC),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,2.3,2,65352.128.2.3.0,Auto Reel,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,2.5,2,65352.128.2.5.0,Header Up,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,2.7,2,65352.128.2.7.0,Header Down,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,3.1,2,65352.128.3.1.0,Feeder Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,3.3,2,65352.128.3.3.0,Thresher Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,3.5,2,65352.128.3.5.0,Unload Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,3.7,2,65352.128.3.7.0,Load Sense Tie In,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,4.1,2,65352.128.4.1.0,Header Attached,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,4.3,2,65352.128.4.3.0,Engine Run,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,4.5,2,65352.128.4.5.0,High Idle,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,4.7,2,65352.128.4.7.0,Vertical Knives Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,5.1,2,65352.128.5.1.0,Ground Speed Hydrostatic Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,5.3,2,65352.128.5.3.0,Road Mode,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,5.5,2,65352.128.5.5.0,Park Brake On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,5.7,2,65352.128.5.7.0,Unload Tube Not In Cradle,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,6.1,2,65352.128.6.1.0,Grain Bin 3/4 Full,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,6.3,2,65352.128.6.3.0,Beacon Light On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,6.5,2,65352.128.6.5.0,Front Work Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,6.7,2,65352.128.6.7.0,Rear Work Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,7.1,2,65352.128.7.1.0,Road Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,7.3,2,65352.128.7.3.0,Left Turn Signal On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,7.5,2,65352.128.7.5.0,Right Turn Signal On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,7.7,2,65352.128.7.7.0,Brake Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,8.1,2,65352.128.8.1.0,Side Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,8.3,2,65352.128.8.3.0,Covers Opening,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,8.5,2,65352.128.8.5.0,Unload Tube Light On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,0,128,8,8.7,2,65352.128.8.7.0,Grain Bin 4/4 Full,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,2.1,2,65352.128.2.1.1,Grain Tank Covers Open,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,2.3,2,65352.128.2.3.1,Straw Walker Blockage,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,2.5,2,65352.128.2.5.1,Stone Trap Open,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,2.7,2,65352.128.2.7.1,Forward Driving,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,3.1,2,65352.128.3.1.1,Reverse Driving,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,3.3,2,65352.128.3.3.1,Rear Wheel Drive Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,3.5,2,65352.128.3.5.1,High Range Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,3.7,2,65352.128.3.7.1,Autofloat HHC Status (Auto-Height),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,4.1,2,65352.128.4.1.1,Pressure Compensation HHC Status (Pressure Float),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,4.3,2,65352.128.4.3.1,Operator Seated,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,4.5,2,65352.128.4.5.1,Pressure Override HHC Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,4.7,2,65352.128.4.7.1,CCM Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,5.1,2,65352.128.5.1.1,Engine Cranking Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,5.3,2,65352.128.5.3.1,Feeder Reverser Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,5.5,2,65352.128.5.5.1,Crop PreSet (ACS) Status,Headland Routine = 00; Crop PreSet 1 = 01; Crop PreSet 2 = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,5.7,2,65352.128.5.7.1,Autopilot Active Status,Not Active (hide icon) = 00; Enabled (grayed icon) = 01; Active (normal icon) = 10; Calibrating (flash icon) = 11,1,0,
+65352,Case IH,1,128,8,6.1,2,65352.128.6.1.1,HHC/ECU Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,6.3,2,65352.128.6.3.1,ASP Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,6.5,2,65352.128.6.5.1,Reel Down Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,6.7,2,65352.128.6.7.1,HHC Status,System running in Open loop / transport = 00; System running in Closed loop = 01; System running in Headland routine = 10; Not Available 11,1,0,
+65352,Case IH,1,128,8,7.1,2,65352.128.7.1.1,Header Speed Auto Engaged (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,7.3,2,65352.128.7.3.1,Auto HHC1 (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,7.5,2,65352.128.7.5.1,Auto HHC2 (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,7.7,2,65352.128.7.7.1,Feeder Calibration Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,8.1,2,65352.128.8.1.1,Rotor Speed Range 1,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,8.3,2,65352.128.8.3.1,Rotor Speed Range 2,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,8.5,2,65352.128.8.5.1,Rotor Speed Range 3,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,1,128,8,8.7,2,65352.128.8.7.1,Rotor Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,2.1,2,65352.128.2.1.2,Ride Control Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,2.3,2,65352.128.2.3.2,Rotor Deslug Mode Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,2.5,2,65352.128.2.5.2,Rotor Calibration Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,2.7,2,65352.128.2.7.2,(Display) Protected Mode Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,3.1,2,65352.128.3.1.2,Spreader Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,3.3,2,65352.128.3.3.2,Pressure Float Override Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,3.5,2,65352.128.3.5.2,Auto Height Override Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,3.7,2,65352.128.3.7.2,Stone Detected,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,4.1,2,65352.128.4.1.2,Feedrate Active Status,Not Active (hide icon) = 00; Enabled (grayed icon) = 01; Active (normal icon) = 10; Calibrating (flash icon) = 11,1,0,
+65352,Case IH,2,128,8,4.3,2,65352.128.4.3.2,Beater/Chopper Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,4.5,2,65352.128.4.5.2,Kill Stall Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,4.7,2,65352.128.4.7.2,CR elevation Chop Drop Status,Grain chop mode = 00; Grain drop mode = 01; Corn Drop mode = 10; Not feasible = 11,1,0,
+65352,Case IH,2,128,8,5.1,2,65352.128.5.1.2,Load Sense Activation Request CCM1,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,5.3,2,65352.128.5.3.2,Load Sense Activation Request CCM3,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,5.5,2,65352.128.5.5.2,Country Limitations,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,5.7,2,65352.128.5.7.2,Engine Grid Heater Active - Reserved,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,6.1,2,65352.128.6.1.2,GrainCam Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,6.3,2,65352.128.6.3.2,VPRA Status,Not Active (icon with normal rear wheels) = 00; Enabled (icon with red rear wheels) = 01; Calibrating(flash icon with red rear wheels) = 10; Error (icon with normal rear wheels) = 11,1,0,
+65352,Case IH,2,128,8,6.5,2,65352.128.6.5.2,Load Sens Req Reverser Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,6.7,2,65352.128.6.7.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,7.1,2,65352.128.7.1.2,Hydraulic Grain Tank Covers Request,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,7.3,2,65352.128.7.3.2,CCM1 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,7.5,2,65352.128.7.5.2,CCM2 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,7.7,2,65352.128.7.7.2,CCM3 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,8.1,2,65352.128.8.1.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,8.3,2,65352.128.8.3.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,8.5,2,65352.128.8.5.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65352,Case IH,2,128,8,8.7,2,65352.128.8.7.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65337,Case IH,,39,8,5.4,2,65337.39.5.4.,Engine stop request,00 = FALSE; 01 = TRUE; 10 = reserved; 11 = not available,1,0,
+65337,Case IH,,39,8,5.6,2,65337.39.5.6.,Vehicle stop,00 = FALSE; 01 = TRUE; 10 = reserved; 11 = not available,1,0,
+65378,Case IH,,132,8,3,16,65378.132.3.,Air Filter,Word value: 0 to 5000; 64512(0FC0016) = not calibrated; 65024(0FE0016) = error; 65280(0FF0016) = not available; Scaling: 0.001 bar/bit gain; 0 bar offset; Range: 0 to 5.0 bar (0 psi to 72. psi) ***Note - .061 bar = 625 mmH2O***,0.001,0,bar
+65384,Case IH,,132,8,1,8,65384.132.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+65384,Case IH,0,132,8,2.1,2,65384.132.2.1.0,Stubble Height HHC Status/(RTC),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,2.3,2,65384.132.2.3.0,Auto Reel,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,2.5,2,65384.132.2.5.0,Header Up,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,2.7,2,65384.132.2.7.0,Header Down,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,3.1,2,65384.132.3.1.0,Feeder Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,3.3,2,65384.132.3.3.0,Thresher Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,3.5,2,65384.132.3.5.0,Unload Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,3.7,2,65384.132.3.7.0,Load Sense Tie In,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,4.1,2,65384.132.4.1.0,Header Attached,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,4.3,2,65384.132.4.3.0,Engine Run,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,4.5,2,65384.132.4.5.0,High Idle,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,4.7,2,65384.132.4.7.0,Vertical Knives Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,5.1,2,65384.132.5.1.0,Ground Speed Hydrostatic Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,5.3,2,65384.132.5.3.0,Road Mode,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,5.5,2,65384.132.5.5.0,Park Brake On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,5.7,2,65384.132.5.7.0,Unload Tube Not In Cradle,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,6.1,2,65384.132.6.1.0,Grain Bin 3/4 Full,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,6.3,2,65384.132.6.3.0,Beacon Light On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,6.5,2,65384.132.6.5.0,Front Work Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,6.7,2,65384.132.6.7.0,Rear Work Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,7.1,2,65384.132.7.1.0,Road Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,7.3,2,65384.132.7.3.0,Left Turn Signal On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,7.5,2,65384.132.7.5.0,Right Turn Signal On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,7.7,2,65384.132.7.7.0,Brake Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,8.1,2,65384.132.8.1.0,Side Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,8.3,2,65384.132.8.3.0,Covers Opening,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,8.5,2,65384.132.8.5.0,Unload Tube Light On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,0,132,8,8.7,2,65384.132.8.7.0,Grain Bin 4/4 Full,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,2.1,2,65384.132.2.1.1,Grain Tank Covers Open,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,2.3,2,65384.132.2.3.1,Straw Walker Blockage,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,2.5,2,65384.132.2.5.1,Stone Trap Open,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,2.7,2,65384.132.2.7.1,Forward Driving,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,3.1,2,65384.132.3.1.1,Reverse Driving,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,3.3,2,65384.132.3.3.1,Rear Wheel Drive Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,3.5,2,65384.132.3.5.1,High Range Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,3.7,2,65384.132.3.7.1,Autofloat HHC Status (Auto-Height),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,4.1,2,65384.132.4.1.1,Pressure Compensation HHC Status (Pressure Float),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,4.3,2,65384.132.4.3.1,Operator Seated,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,4.5,2,65384.132.4.5.1,Pressure Override HHC Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,4.7,2,65384.132.4.7.1,CCM Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,5.1,2,65384.132.5.1.1,Engine Cranking Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,5.3,2,65384.132.5.3.1,Feeder Reverser Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,5.5,2,65384.132.5.5.1,Crop PreSet (ACS) Status,Headland Routine = 00; Crop PreSet 1 = 01; Crop PreSet 2 = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,5.7,2,65384.132.5.7.1,Autopilot Active Status,Not Active (hide icon) = 00; Enabled (grayed icon) = 01; Active (normal icon) = 10; Calibrating (flash icon) = 11,1,0,
+65384,Case IH,1,132,8,6.1,2,65384.132.6.1.1,HHC/ECU Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,6.3,2,65384.132.6.3.1,ASP Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,6.5,2,65384.132.6.5.1,Reel Down Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,6.7,2,65384.132.6.7.1,HHC Status,System running in Open loop / transport = 00; System running in Closed loop = 01; System running in Headland routine = 10; Not Available 11,1,0,
+65384,Case IH,1,132,8,7.1,2,65384.132.7.1.1,Header Speed Auto Engaged (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,7.3,2,65384.132.7.3.1,Auto HHC1 (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,7.5,2,65384.132.7.5.1,Auto HHC2 (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,7.7,2,65384.132.7.7.1,Feeder Calibration Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,8.1,2,65384.132.8.1.1,Rotor Speed Range 1,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,8.3,2,65384.132.8.3.1,Rotor Speed Range 2,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,8.5,2,65384.132.8.5.1,Rotor Speed Range 3,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,1,132,8,8.7,2,65384.132.8.7.1,Rotor Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,2.1,2,65384.132.2.1.2,Ride Control Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,2.3,2,65384.132.2.3.2,Rotor Deslug Mode Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,2.5,2,65384.132.2.5.2,Rotor Calibration Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,2.7,2,65384.132.2.7.2,(Display) Protected Mode Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,3.1,2,65384.132.3.1.2,Spreader Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,3.3,2,65384.132.3.3.2,Pressure Float Override Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,3.5,2,65384.132.3.5.2,Auto Height Override Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,3.7,2,65384.132.3.7.2,Stone Detected,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,4.1,2,65384.132.4.1.2,Feedrate Active Status,Not Active (hide icon) = 00; Enabled (grayed icon) = 01; Active (normal icon) = 10; Calibrating (flash icon) = 11,1,0,
+65384,Case IH,2,132,8,4.3,2,65384.132.4.3.2,Beater/Chopper Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,4.5,2,65384.132.4.5.2,Kill Stall Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,4.7,2,65384.132.4.7.2,CR elevation Chop Drop Status,Grain chop mode = 00; Grain drop mode = 01; Corn Drop mode = 10; Not feasible = 11,1,0,
+65384,Case IH,2,132,8,5.1,2,65384.132.5.1.2,Load Sense Activation Request CCM1,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,5.3,2,65384.132.5.3.2,Load Sense Activation Request CCM3,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,5.5,2,65384.132.5.5.2,Country Limitations,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,5.7,2,65384.132.5.7.2,Engine Grid Heater Active - Reserved,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,6.1,2,65384.132.6.1.2,GrainCam Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,6.3,2,65384.132.6.3.2,VPRA Status,Not Active (icon with normal rear wheels) = 00; Enabled (icon with red rear wheels) = 01; Calibrating(flash icon with red rear wheels) = 10; Error (icon with normal rear wheels) = 11,1,0,
+65384,Case IH,2,132,8,6.5,2,65384.132.6.5.2,Load Sens Req Reverser Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,6.7,2,65384.132.6.7.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,7.1,2,65384.132.7.1.2,Hydraulic Grain Tank Covers Request,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,7.3,2,65384.132.7.3.2,CCM1 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,7.5,2,65384.132.7.5.2,CCM2 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,7.7,2,65384.132.7.7.2,CCM3 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,8.1,2,65384.132.8.1.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,8.3,2,65384.132.8.3.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,8.5,2,65384.132.8.5.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65384,Case IH,2,132,8,8.7,2,65384.132.8.7.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65387,Case IH,,132,8,1.5,2,65387.132.1.5.,Engine Over Heat,00 = false; 01 = true; 10 = reserved; 11 = not available,1,0,
+65387,Case IH,,132,8,1.7,2,65387.132.1.7.,Engine Over Speed,00 = false; 01 = true; 10 = reserved; 11 = not available,1,0,
+65429,Case IH,,164,8,1,16,65429.164.1.,Fuel level sensor,Byte value: 0 to 100; 254 = error; Scaling: 1%/bit gain; 0% offset; Range: 0% to 100%,1,0,%
+65432,Case IH,,164,8,1,8,65432.164.1.0.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,
+65432,Case IH,0,164,8,2.1,2,65432.164.2.1.0,Stubble Height HHC Status/(RTC),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,2.3,2,65432.164.2.3.0,Auto Reel,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,2.5,2,65432.164.2.5.0,Header Up,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,2.7,2,65432.164.2.7.0,Header Down,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,3.1,2,65432.164.3.1.0,Feeder Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,3.3,2,65432.164.3.3.0,Thresher Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,3.5,2,65432.164.3.5.0,Unload Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,3.7,2,65432.164.3.7.0,Load Sense Tie In,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,4.1,2,65432.164.4.1.0,Header Attached,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,4.3,2,65432.164.4.3.0,Engine Run,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,4.5,2,65432.164.4.5.0,High Idle,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,4.7,2,65432.164.4.7.0,Vertical Knives Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,5.1,2,65432.164.5.1.0,Ground Speed Hydrostatic Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,5.3,2,65432.164.5.3.0,Road Mode,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,5.5,2,65432.164.5.5.0,Park Brake On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,5.7,2,65432.164.5.7.0,Unload Tube Not In Cradle,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,6.1,2,65432.164.6.1.0,Grain Bin 3/4 Full,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,6.3,2,65432.164.6.3.0,Beacon Light On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,6.5,2,65432.164.6.5.0,Front Work Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,6.7,2,65432.164.6.7.0,Rear Work Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,7.1,2,65432.164.7.1.0,Road Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,7.3,2,65432.164.7.3.0,Left Turn Signal On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,7.5,2,65432.164.7.5.0,Right Turn Signal On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,7.7,2,65432.164.7.7.0,Brake Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,8.1,2,65432.164.8.1.0,Side Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,8.3,2,65432.164.8.3.0,Covers Opening,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,8.5,2,65432.164.8.5.0,Unload Tube Light On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,0,164,8,8.7,2,65432.164.8.7.0,Grain Bin 4/4 Full,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,2.1,2,65432.164.2.1.1,Grain Tank Covers Open,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,2.3,2,65432.164.2.3.1,Straw Walker Blockage,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,2.5,2,65432.164.2.5.1,Stone Trap Open,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,2.7,2,65432.164.2.7.1,Forward Driving,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,3.1,2,65432.164.3.1.1,Reverse Driving,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,3.3,2,65432.164.3.3.1,Rear Wheel Drive Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,3.5,2,65432.164.3.5.1,High Range Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,3.7,2,65432.164.3.7.1,Autofloat HHC Status (Auto-Height),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,4.1,2,65432.164.4.1.1,Pressure Compensation HHC Status (Pressure Float),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,4.3,2,65432.164.4.3.1,Operator Seated,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,4.5,2,65432.164.4.5.1,Pressure Override HHC Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,4.7,2,65432.164.4.7.1,CCM Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,5.1,2,65432.164.5.1.1,Engine Cranking Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,5.3,2,65432.164.5.3.1,Feeder Reverser Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,5.5,2,65432.164.5.5.1,Crop PreSet (ACS) Status,Headland Routine = 00; Crop PreSet 1 = 01; Crop PreSet 2 = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,5.7,2,65432.164.5.7.1,Autopilot Active Status,Not Active (hide icon) = 00; Enabled (grayed icon) = 01; Active (normal icon) = 10; Calibrating (flash icon) = 11,1,0,
+65432,Case IH,1,164,8,6.1,2,65432.164.6.1.1,HHC/ECU Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,6.3,2,65432.164.6.3.1,ASP Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,6.5,2,65432.164.6.5.1,Reel Down Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,6.7,2,65432.164.6.7.1,HHC Status,System running in Open loop / transport = 00; System running in Closed loop = 01; System running in Headland routine = 10; Not Available 11,1,0,
+65432,Case IH,1,164,8,7.1,2,65432.164.7.1.1,Header Speed Auto Engaged (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,7.3,2,65432.164.7.3.1,Auto HHC1 (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,7.5,2,65432.164.7.5.1,Auto HHC2 (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,7.7,2,65432.164.7.7.1,Feeder Calibration Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,8.1,2,65432.164.8.1.1,Rotor Speed Range 1,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,8.3,2,65432.164.8.3.1,Rotor Speed Range 2,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,8.5,2,65432.164.8.5.1,Rotor Speed Range 3,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,1,164,8,8.7,2,65432.164.8.7.1,Rotor Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,2.1,2,65432.164.2.1.2,Ride Control Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,2.3,2,65432.164.2.3.2,Rotor Deslug Mode Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,2.5,2,65432.164.2.5.2,Rotor Calibration Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,2.7,2,65432.164.2.7.2,(Display) Protected Mode Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,3.1,2,65432.164.3.1.2,Spreader Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,3.3,2,65432.164.3.3.2,Pressure Float Override Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,3.5,2,65432.164.3.5.2,Auto Height Override Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,3.7,2,65432.164.3.7.2,Stone Detected,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,4.1,2,65432.164.4.1.2,Feedrate Active Status,Not Active (hide icon) = 00; Enabled (grayed icon) = 01; Active (normal icon) = 10; Calibrating (flash icon) = 11,1,0,
+65432,Case IH,2,164,8,4.3,2,65432.164.4.3.2,Beater/Chopper Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,4.5,2,65432.164.4.5.2,Kill Stall Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,4.7,2,65432.164.4.7.2,CR elevation Chop Drop Status,Grain chop mode = 00; Grain drop mode = 01; Corn Drop mode = 10; Not feasible = 11,1,0,
+65432,Case IH,2,164,8,5.1,2,65432.164.5.1.2,Load Sense Activation Request CCM1,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,5.3,2,65432.164.5.3.2,Load Sense Activation Request CCM3,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,5.5,2,65432.164.5.5.2,Country Limitations,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,5.7,2,65432.164.5.7.2,Engine Grid Heater Active - Reserved,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,6.1,2,65432.164.6.1.2,GrainCam Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,6.3,2,65432.164.6.3.2,VPRA Status,Not Active (icon with normal rear wheels) = 00; Enabled (icon with red rear wheels) = 01; Calibrating(flash icon with red rear wheels) = 10; Error (icon with normal rear wheels) = 11,1,0,
+65432,Case IH,2,164,8,6.5,2,65432.164.6.5.2,Load Sens Req Reverser Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,6.7,2,65432.164.6.7.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,7.1,2,65432.164.7.1.2,Hydraulic Grain Tank Covers Request,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,7.3,2,65432.164.7.3.2,CCM1 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,7.5,2,65432.164.7.5.2,CCM2 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,7.7,2,65432.164.7.7.2,CCM3 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,8.1,2,65432.164.8.1.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,8.3,2,65432.164.8.3.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,8.5,2,65432.164.8.5.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65432,Case IH,2,164,8,8.7,2,65432.164.8.7.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65475,Case IH,,164,8,1,16,65475.164.1.,Moisture Content,range; resolution and offset not documented; values from PGN 65475; Crop moisture content (0.01% per bit),0.01,0,%
+65475,Case IH,,164,8,3,16,65475.164.3.,Flow Rate,range; resolution and offset not documented; values from PGN 65475; Crop mass flow (0.01 gram per second per bit),0.001,0,kg/s
+65475,Case IH,,164,8,5,16,65475.164.5.,Yield sensor net mv,range; resolution and offset not documented; values from PGN 65475;,1,0,mv
+65473,Case IH,,164,8,1,16,65473.164.1.,Moisture Sensor net mv,range; resolution and offset not documented; values from PGN 65475;,1,0,mv
+65473,Case IH,,164,8,5,16,65473.164.5.,Yield sensor net mv,range; resolution and offset not documented; values from PGN 65475;,1,0,mv
+65464,Case IH,,196,8,1,8,65464.196.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+65464,Case IH,0,196,8,2.1,2,65464.196.2.1.0,Stubble Height HHC Status/(RTC),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,2.3,2,65464.196.2.3.0,Auto Reel,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,2.5,2,65464.196.2.5.0,Header Up,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,2.7,2,65464.196.2.7.0,Header Down,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,3.1,2,65464.196.3.1.0,Feeder Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,3.3,2,65464.196.3.3.0,Thresher Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,3.5,2,65464.196.3.5.0,Unload Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,3.7,2,65464.196.3.7.0,Load Sense Tie In,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,4.1,2,65464.196.4.1.0,Header Attached,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,4.3,2,65464.196.4.3.0,Engine Run,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,4.5,2,65464.196.4.5.0,High Idle,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,4.7,2,65464.196.4.7.0,Vertical Knives Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,5.1,2,65464.196.5.1.0,Ground Speed Hydrostatic Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,5.3,2,65464.196.5.3.0,Road Mode,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,5.5,2,65464.196.5.5.0,Park Brake On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,5.7,2,65464.196.5.7.0,Unload Tube Not In Cradle,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,6.1,2,65464.196.6.1.0,Grain Bin 3/4 Full,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,6.3,2,65464.196.6.3.0,Beacon Light On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,6.5,2,65464.196.6.5.0,Front Work Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,6.7,2,65464.196.6.7.0,Rear Work Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,7.1,2,65464.196.7.1.0,Road Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,7.3,2,65464.196.7.3.0,Left Turn Signal On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,7.5,2,65464.196.7.5.0,Right Turn Signal On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,7.7,2,65464.196.7.7.0,Brake Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,8.1,2,65464.196.8.1.0,Side Lights On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,8.3,2,65464.196.8.3.0,Covers Opening,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,8.5,2,65464.196.8.5.0,Unload Tube Light On,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,0,196,8,8.7,2,65464.196.8.7.0,Grain Bin 4/4 Full,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,2.1,2,65464.196.2.1.1,Grain Tank Covers Open,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,2.3,2,65464.196.2.3.1,Straw Walker Blockage,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,2.5,2,65464.196.2.5.1,Stone Trap Open,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,2.7,2,65464.196.2.7.1,Forward Driving,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,3.1,2,65464.196.3.1.1,Reverse Driving,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,3.3,2,65464.196.3.3.1,Rear Wheel Drive Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,3.5,2,65464.196.3.5.1,High Range Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,3.7,2,65464.196.3.7.1,Autofloat HHC Status (Auto-Height),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,4.1,2,65464.196.4.1.1,Pressure Compensation HHC Status (Pressure Float),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,4.3,2,65464.196.4.3.1,Operator Seated,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,4.5,2,65464.196.4.5.1,Pressure Override HHC Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,4.7,2,65464.196.4.7.1,CCM Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,5.1,2,65464.196.5.1.1,Engine Cranking Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,5.3,2,65464.196.5.3.1,Feeder Reverser Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,5.5,2,65464.196.5.5.1,Crop PreSet (ACS) Status,Headland Routine = 00; Crop PreSet 1 = 01; Crop PreSet 2 = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,5.7,2,65464.196.5.7.1,Autopilot Active Status,Not Active (hide icon) = 00; Enabled (grayed icon) = 01; Active (normal icon) = 10; Calibrating (flash icon) = 11,1,0,
+65464,Case IH,1,196,8,6.1,2,65464.196.6.1.1,HHC/ECU Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,6.3,2,65464.196.6.3.1,ASP Errors Active Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,6.5,2,65464.196.6.5.1,Reel Down Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,6.7,2,65464.196.6.7.1,HHC Status,System running in Open loop / transport = 00; System running in Closed loop = 01; System running in Headland routine = 10; Not Available 11,1,0,
+65464,Case IH,1,196,8,7.1,2,65464.196.7.1.1,Header Speed Auto Engaged (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,7.3,2,65464.196.7.3.1,Auto HHC1 (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,7.5,2,65464.196.7.5.1,Auto HHC2 (AF Only),Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,7.7,2,65464.196.7.7.1,Feeder Calibration Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,8.1,2,65464.196.8.1.1,Rotor Speed Range 1,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,8.3,2,65464.196.8.3.1,Rotor Speed Range 2,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,8.5,2,65464.196.8.5.1,Rotor Speed Range 3,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,1,196,8,8.7,2,65464.196.8.7.1,Rotor Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,2.1,2,65464.196.2.1.2,Ride Control Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,2.3,2,65464.196.2.3.2,Rotor Deslug Mode Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,2.5,2,65464.196.2.5.2,Rotor Calibration Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,2.7,2,65464.196.2.7.2,(Display) Protected Mode Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,3.1,2,65464.196.3.1.2,Spreader Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,3.3,2,65464.196.3.3.2,Pressure Float Override Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,3.5,2,65464.196.3.5.2,Auto Height Override Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,3.7,2,65464.196.3.7.2,Stone Detected,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,4.1,2,65464.196.4.1.2,Feedrate Active Status,Not Active (hide icon) = 00; Enabled (grayed icon) = 01; Active (normal icon) = 10; Calibrating (flash icon) = 11,1,0,
+65464,Case IH,2,196,8,4.3,2,65464.196.4.3.2,Beater/Chopper Engaged,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,4.5,2,65464.196.4.5.2,Kill Stall Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,4.7,2,65464.196.4.7.2,CR elevation Chop Drop Status,Grain chop mode = 00; Grain drop mode = 01; Corn Drop mode = 10; Not feasible = 11,1,0,
+65464,Case IH,2,196,8,5.1,2,65464.196.5.1.2,Load Sense Activation Request CCM1,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,5.3,2,65464.196.5.3.2,Load Sense Activation Request CCM3,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,5.5,2,65464.196.5.5.2,Country Limitations,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,5.7,2,65464.196.5.7.2,Engine Grid Heater Active - Reserved,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,6.1,2,65464.196.6.1.2,GrainCam Active,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,6.3,2,65464.196.6.3.2,VPRA Status,Not Active (icon with normal rear wheels) = 00; Enabled (icon with red rear wheels) = 01; Calibrating(flash icon with red rear wheels) = 10; Error (icon with normal rear wheels) = 11,1,0,
+65464,Case IH,2,196,8,6.5,2,65464.196.6.5.2,Load Sens Req Reverser Status,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,6.7,2,65464.196.6.7.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,7.1,2,65464.196.7.1.2,Hydraulic Grain Tank Covers Request,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,7.3,2,65464.196.7.3.2,CCM1 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,7.5,2,65464.196.7.5.2,CCM2 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,7.7,2,65464.196.7.7.2,CCM3 Calibration,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,8.1,2,65464.196.8.1.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,8.3,2,65464.196.8.3.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,8.5,2,65464.196.8.5.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+65464,Case IH,2,196,8,8.7,2,65464.196.8.7.2,,Status Off = 00; Status On = 01; Defect = 10; Not Available = 11,1,0,
+61184,John Deere,,225,8,1,16,61184.225.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+61184,John Deere,7905,225,8,4,24,61184.225.4.7905,Rate Applied,Sprayer - Rate applied in gal/ac LSB format,0.0001,0,gal/ac
+61184,John Deere,7906,225,8,4,8,61184.225.4.7906,Boom On Y/N,Sprayer - Is the boom on. (Although nozzles can still be off) ,1,0,decimal
+61184,John Deere,7906,225,8,6,8,61184.225.6.7906,Boom On Y/N,Sprayer - Is the boom on. (Although nozzles can still be off) ,1,0,decimal
+61184,John Deere,24003,225,8,3.1,1,61184.225.3.1.24003,Boom On Y/N,Sprayer - Is the boom on. (Although nozzles can still be off) Right most bit,1,0,binary
+65535,John Deere,,225,8,1,16,65535.225.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+65535,John Deere,222,225,8,6,16,65535.225.6.222,Product Pump PSI,Sprayer - Pump PSI (LSB),0.0291666,0,decimal
+61184,John Deere,7920,225,8,4,16,61184.225.4.7920,Rate Applied,Sprayer - Rate applied in gal/ac LSB format,0.01,0,gal/ac
+61184,John Deere,7906,225,8,4,8,61184.225.4.7906,Boom On Y/N,Sprayer - Is the boom on. (Although nozzles can still be off) ,1,0,decimal
+61184,John Deere,7906,225,8,6,8,61184.225.6.7906,Boom On Y/N,Sprayer - Is the boom on. (Although nozzles can still be off) ,1,0,decimal
+65535,John Deere,222,225,8,6,16,65535.225.6.222,Product Pump PSI,Sprayer - Pump PSI (LSB),0.0291666,0,decimal
+59136,John Deere,,225,8,1,8,59136.225.1.,PGN Usage Opcode,This PGN has different meaning based on this value,1,0,binary
+59136,John Deere,2950956548,225,8,2.1,16,59136.225.2.1.2950956548,Boom section L3 on/off,Spayer VT message - Boom section L3 on/off,,,enum
+59136,John Deere,2951022084,225,8,2.1,16,59136.225.2.1.2951022084,Boom section L2 on/off,Spayer VT message - Boom section L2 on/off,,,enum
+59136,John Deere,2951218692,225,8,2.1,16,59136.225.2.1.2951218692,Boom section L1 on/off,Spayer VT message - Boom section L1 on/off,,,enum
+59136,John Deere,2951284228,225,8,2.1,16,59136.225.2.1.2951284228,Boom section C on/off,Spayer VT message - Boom section C on/off,,,enum
+59136,John Deere,2951349764,225,8,2.1,16,59136.225.2.1.2951349764,Boom section R1 on/off,Spayer VT message - Boom section R1 on/off,,,enum
+59136,John Deere,2940734212,225,8,2.1,16,59136.225.2.1.2940734212,Boom section R2 on/off,Spayer VT message - Boom section R2 on/off,,,enum
+59136,John Deere,2940799748,225,8,2.1,16,59136.225.2.1.2940799748,Boom section R3 on/off,Spayer VT message - Boom section R3 on/off,,,enum
+59136,John Deere,2950497541,225,8,2.1,16,59136.225.2.1.2950497541,Boom section L1 enable/disable,Spayer VT message - Boom section L1 enable/disable (Can be enabled but still off),,,enum
+59136,John Deere,2950104325,225,8,2.1,16,59136.225.2.1.2950104325,Boom section L2 enable/disable,Spayer VT message - Boom section L2 enable/disable (Can be enabled but still off),,,enum
+59136,John Deere,2949514501,225,8,2.1,16,59136.225.2.1.2949514501,Boom section L3 enable/disable,Spayer VT message - Boom section L3 enable/disable (Can be enabled but still off),,,enum
+59136,John Deere,2950890757,225,8,2.1,16,59136.225.2.1.2950890757,Boom section C enable/disable,Spayer VT message - Boom section C enable/disable (Can be enabled but still off),,,enum
+59136,John Deere,2951283973,225,8,2.1,16,59136.225.2.1.2951283973,Boom section R1 enable/disable,Spayer VT message - Boom section R1 enable/disable (Can be enabled but still off),,,enum
+59136,John Deere,2951677189,225,8,2.1,16,59136.225.2.1.2951677189,Boom section R2 enable/disable,Spayer VT message - Boom section R2 enable/disable (Can be enabled but still off),,,enum
+59136,John Deere,2952070405,225,8,2.1,16,59136.225.2.1.2952070405,Boom section R3 enable/disable,Spayer VT message - Boom section R3 enable/disable (Can be enabled but still off),,,enum
+59136,John Deere,2828081407,225,8,2.1,32,59136.225.2.1.2828081407,Boom height L1,Spayer VT message - Boom height from sensor L1,,,
+59136,John Deere,2831489023,225,8,2.1,32,59136.225.2.1.2831489023,Boom height L2,Spayer VT message - Boom height from sensor L2,,,
+59136,John Deere,2832931071,225,8,2.1,32,59136.225.2.1.2832931071,Boom height C,Spayer VT message - Boom height from sensor C,,,
+59136,John Deere,2828998911,225,8,2.1,32,59136.225.2.1.2828998911,Boom height R1,Spayer VT message - Boom height from sensor R1,,,
+59136,John Deere,2829064447,225,8,2.1,32,59136.225.2.1.2829064447,Boom height R2,Spayer VT message - Boom height from sensor R2,,,
+59136,John Deere,2833123071,225,8,2.1,32,59136.225.2.1.2833123071,Pump PSI,Spayer VT message - Pump PSI,,,psi
+59136,John Deere,2820212223,225,8,2.1,32,59136.225.2.1.2820212223,Rate applied,Spayer VT message - Rate applied in gal/ac,,,gal/ac
+59136,John Deere,2834499327,225,8,2.1,32,59136.225.2.1.2834499327,Engine RPM,Spayer VT message - Engine RPM,,,rpm
+65322,Case IH,,192,8,2,8,65322.192.2.,Grain Flow,Grain Flow,0.1,0,kg/s
+65393,Case IH,,196,8,3,16,65393.196.3.,Grain Moisture,Grain Moisture,0.005,0,%
+65333,Gleaner / AGCO,,0,8,4,8,65333.0.4.,Grain Moisture,Grain Moisture,0.1,0,%
+65333,Gleaner / AGCO,,0,8,5,8,65333.0.5.,Grain Flow,Grain Flow,0.025,0,kg/s
+65256,,,28,8,1,16,165,Compass Bearing,,0.0078125,0,deg
+65256,,,28,8,3,16,517,Navigation-Based Vehicle Speed,,0.00390625,0,km/h
+65256,,,28,8,5,16,583,Pitch,,0.0078125,-200,deg
+65256,,,28,8,7,16,580,Altitude,,0.125,-2500,m
+65267,,,28,8,1,32,584,Latitude,,0.0000001,-210,deg
+65267,,,28,8,5,32,585,Longitude,,0.0000001,-210,deg

@@ -1,0 +1,5 @@
+1433426120.48	18FEF31C3D422397722E724B	65267	{"Latitude": 43.56703329999999, "Longitude": -83.4225806}
+1433426120.48	18FEE81CC47C300000648354	65256	{"Compass Bearing": 249.53125, "Altitude": 204.375, "Navigation-Based Vehicle Speed": 0.1875, "Pitch": 0.0}
+1433426120.83	18FFFFEA11A680C0FC0D09FF	65535	{"Header Identifier": 9}
+1433426120.9	10EFFFD34F090000C8040102	61184	{"Grain Flow": 0.0, "Grain Moisture": 12.24}
+1433426121.07	18FFFF1718B823B82308084C	65535	{"Header actual width": 9144, "Header number of rows": 8, "Header width in use": 9144, "Header row spacing": 76, "Header number of rows in cut": 8}
