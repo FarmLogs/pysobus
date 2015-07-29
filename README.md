@@ -1,7 +1,7 @@
 # PySOBUS
 ##Python ISOBUS Libraries
 
-This library provides proprietary ISOBUS message specifications and decoding tools for messages relevant to yield calculation.  AFS700 and GreenStar 2600/2630 monitors have been tested.
+This library provides ISOBUS message specifications and decoding tools for proprietary messages that are not publicly defined. The initial focus is on messages that are relevant to yield calculation.
 Message specifications are stored in the file pysobus/message_definitions.csv in the following format:
 * pgn_id: parameter group number
 * manufacturer: equipment manufacturer, i.e., John Deere, Case, etc.

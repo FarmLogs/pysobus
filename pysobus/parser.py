@@ -10,6 +10,60 @@ _mask3bit = ((1 << 3) - 1)
 _mask8bit = ((1 << 8) - 1)
 
 
+def msg_to_header_info_and_payload(hex_message, timestamp=0):
+    """
+    decode a hex message into its core components:
+    pgn, source and payload integer
+    >>> import pprint
+    >>> pprint.pprint(msg_to_header_info_and_payload('60FEF31CD1EE2397FA7C744B')) #doctest: +NORMALIZE_WHITESPACE
+    {'header': '60FEF31C',
+     'message': '60FEF31CD1EE2397FA7C744B',
+     'payload_bytes': ['D1', 'EE', '23', '97', 'FA', '7C', '74', '4B'],
+     'payload_int': 5437108065862414033,
+     'pgn': 65267,
+     'priority': 0,
+     'source': 28,
+     'timestamp': 0}
+    """
+
+    # J1939 header info:
+    # http://www.ni.com/example/31215/en/
+    # http://tucrrc.utulsa.edu/J1939_files/HeaderStructure.jpg
+    header_hex = hex_message[:8]
+    header = int(header_hex, 16)
+
+    src = header & _mask8bit
+    header >>= 8
+    pdu_ps = header & _mask8bit
+    header >>= 8
+    pdu_pf = header & _mask8bit
+    header >>= 8
+    res_dp = header & _mask2bit
+    header >>= 2
+    priority = header & _mask3bit
+
+    pgn = res_dp
+    pgn <<= 8
+    pgn |= pdu_pf
+    pgn <<= 8
+    if pdu_pf >= 240:
+        # pdu format 2 - broadcast message. PDU PS is an extension of
+        # the identifier
+        pgn |= pdu_ps
+
+    payload_bytes = re.findall('[0-9a-fA-F]{2}', hex_message[8:])
+    payload_int = int(''.join(reversed(payload_bytes)), 16)
+
+    return {'pgn': pgn,
+            'source': src,
+            'priority': priority,
+            'payload_int': payload_int,
+            'payload_bytes': payload_bytes,
+            'header': header_hex,
+            'message': hex_message,
+            'timestamp': timestamp}
+
+
 class Parser(object):
     def __init__(self):
         # load PGN/SPN definitions from text. Use Spanner's tables library
@@ -72,63 +126,6 @@ class Parser(object):
             return self.pgn_src_to_parser[key].parse_from_info_dict(info)
 
 
-def msg_to_header_info_and_payload(hex_message, timestamp=0):
-    """
-    decode a hex message into its core components:
-    pgn, source and payload integer
-    >>> import pprint
-    >>> pprint.pprint(msg_to_header_info_and_payload('60FEF31CD1EE2397FA7C744B')) #doctest: +NORMALIZE_WHITESPACE
-    {'header': '60FEF31C',
-     'message': '60FEF31CD1EE2397FA7C744B',
-     'payload_bytes': ['D1', 'EE', '23', '97', 'FA', '7C', '74', '4B'],
-     'payload_int': 5437108065862414033,
-     'pgn': 65267,
-     'priority': 0,
-     'source': 28,
-     'timestamp': 0}
-    """
-
-    # http://www.ni.com/example/31215/en/
-    # http://tucrrc.utulsa.edu/J1939_files/HeaderStructure.jpg
-    header_hex = hex_message[:8]
-    header = int(header_hex, 16)
-
-    src = header & _mask8bit
-    header >>= 8
-    pdu_ps = header & _mask8bit
-    header >>= 8
-    pdu_pf = header & _mask8bit
-    header >>= 8
-    res_dp = header & _mask2bit
-    header >>= 2
-    priority = header & _mask3bit
-
-    pgn = res_dp
-    pgn <<= 8
-    pgn |= pdu_pf
-    pgn <<= 8
-    if pdu_pf < 240:
-        # pdu format 1 - pdu specific field is a destination address
-        # set to 0 for pgn calculation
-        pass
-    else:
-        # pdu format 2 - broadcast message. PDU PS is an extension of
-        # the identifier
-        pgn |= pdu_ps
-
-    payload_bytes = re.findall('[0-9a-fA-F]{2}', hex_message[8:])
-    payload_int = int(''.join(reversed(payload_bytes)), 16)
-
-    return {'pgn': pgn,
-            'source': src,
-            'priority': priority,
-            'payload_int': payload_int,
-            'payload_bytes': payload_bytes,
-            'header': header_hex,
-            'message': hex_message,
-            'timestamp': timestamp}
-
-
 class PGN(object):
     def __init__(self, pgn, num_bytes, source_address,
                  opcode_to_spns, opcode_parser=None):
@@ -172,7 +169,7 @@ class SPN(object):
         self.offset = offset
         self.signed = signed
 
-        # parse bit offset from decimal format in spreadsheet:
+        # parse bit offset from decimal format in the message spec file:
         # {byte pos}.{bit offset}
         byte_offs = int(position) - 1
         bit_offs = max(0, int(position * 10) % 10 - 1)
@@ -195,9 +192,8 @@ class SPN(object):
 # PGN 129029, the NMEA navigation message, is multi-part, and a little more
 # complicated to handle.  For the time being, we are leaving it as a separate
 # class
-
+# See the following link for details:
 # http://hemispheregnss.com/gpsreference/GNSSPositionData.htm
-# So far have only decoded lat/lng
 
 class PGN129029(PGN):
     def __init__(self):
