@@ -1,10 +1,13 @@
 # PySOBUS
 ##Python ISOBUS Libraries
 
-This library provides ISOBUS message specifications and decoding tools for proprietary messages that are not publicly defined. The initial focus is on messages that are relevant to yield calculation.
-Message specifications are stored in the file pysobus/message_definitions.csv in the following format:
+PySOBUS provides ISO 11783 (ISOBUS) message specifications and decoding tools for proprietary messages which are not publicly defined.
+
+The initial focus is on messages that are relevant to yield calculation.  Currently supported are combines with AFS 700 or GreenStar 2600/2630 displays.
+
+Message specifications are stored in [pysobus/message_definitions.csv](https://github.com/FarmLogs/pysobus/blob/master/pysobus/message_definitions.csv) in the following format:
 * pgn_id: parameter group number
-* manufacturer: equipment manufacturer, i.e., John Deere, Case, etc.
+* manufacturer: equipment manufacturer, e.g. John Deere, Case, etc.
 * source_address: CAN bus network address for message sender
 * pgn_length_bytes: number of bytes per message
 * spn_start_position: bit offset for the SPN (suspect parameter number) within the PGN message.  Format: {byte offset}.{bit offset} (ones based).  Examples: 1.1 => 0 bit offset, 2.3 => 10 bit offset
@@ -21,7 +24,7 @@ Message specifications are stored in the file pysobus/message_definitions.csv in
     $ cd pysobus/
     $ python setup.py install
 
-###Usage example
+###Usage
 ```python
 >>> from pysobus.parser import Parser
 >>> p = Parser()
@@ -38,7 +41,4 @@ Message specifications are stored in the file pysobus/message_definitions.csv in
  'spn_vals': {'Latitude': 43.56703329999999, 'Longitude': -83.4225806}}
 ```
 
-Several example messages with decoded results are available in pysobus/tests
-
-###Requirements
-* spanner
+Additional example messages with decoded results are available in  [pysobus/tests](https://github.com/FarmLogs/pysobus/tree/master/pysobus/tests).
