@@ -5,9 +5,9 @@ from collections import defaultdict
 
 import spanner as sp
 
-_mask2bit = ((1 << 2) - 1)
-_mask3bit = ((1 << 3) - 1)
-_mask8bit = ((1 << 8) - 1)
+MASK_2_BIT = ((1 << 2) - 1)
+MASK_3_BIT = ((1 << 3) - 1)
+MASK_8_BIT = ((1 << 8) - 1)
 
 
 def msg_to_header_info_and_payload(hex_message, timestamp=0):
@@ -32,15 +32,15 @@ def msg_to_header_info_and_payload(hex_message, timestamp=0):
     header_hex = hex_message[:8]
     header = int(header_hex, 16)
 
-    src = header & _mask8bit
+    src = header & MASK_8_BIT
     header >>= 8
-    pdu_ps = header & _mask8bit
+    pdu_ps = header & MASK_8_BIT
     header >>= 8
-    pdu_pf = header & _mask8bit
+    pdu_pf = header & MASK_8_BIT
     header >>= 8
-    res_dp = header & _mask2bit
+    res_dp = header & MASK_2_BIT
     header >>= 2
-    priority = header & _mask3bit
+    priority = header & MASK_3_BIT
 
     pgn = res_dp
     pgn <<= 8
