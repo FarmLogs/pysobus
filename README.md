@@ -21,6 +21,14 @@ Message specifications are stored in [pysobus/message_definitions.csv](https://g
 
 ### Installation
 
+Install from PyPI:
+
+```shell
+pip install pysobus
+```
+
+Alternatively, you can clone this repository and install it via `setup.py`:
+
 ```shell
 git clone https://github.com/FarmLogs/pysobus.git
 cd pysobus/
