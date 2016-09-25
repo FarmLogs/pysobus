@@ -1,9 +1,9 @@
 import os
 import re
 import logging
+import csv
 from collections import defaultdict
 
-import spanner as sp
 
 MASK_2_BIT = ((1 << 2) - 1)
 MASK_3_BIT = ((1 << 3) - 1)
@@ -66,15 +66,31 @@ def msg_to_header_info_and_payload(hex_message, timestamp=0):
 
 class Parser(object):
     def __init__(self):
-        # load PGN/SPN definitions from text. Use Spanner's tables library
-        # to group definitions by pgn, manufacturer and source address
-        self.pgn_src_to_parser = dict()
+        # load PGN/SPN definitions from text.
+        # Group definitions by pgn, manufacturer and source address
+        fn = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'message_definitions.csv')
+        pgn_to_spn_specs = defaultdict(list)
         key_cols = ['pgn_id', 'manufacturer', 'pgn_length_bytes', 'source_address']
         val_cols = ['opcode', 'spn_name', 'spn_description',
                     'spn_start_position', 'spn_bit_length', 'scale_factor',
                     'offset', 'units']
-        fn = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'message_definitions.csv')
-        pgn_to_spn_specs = sp.tables.load_dict(fn, key_cols, val_cols, delimiter=',')
+
+        def cast(v):
+            try:
+                f = float(v)
+                if f == int(f):
+                    return int(f)
+                return f
+            except:
+                return v
+
+        with open(fn, 'r') as fh:
+            for row in csv.DictReader(fh):
+                key = tuple(cast(row[key]) for key in key_cols)
+                val = {key: cast(row[key]) for key in val_cols}
+                pgn_to_spn_specs[key].append(val)
+
+        self.pgn_src_to_parser = dict()
 
         # create PGN/SPN decoders according to the message definitions
         for pgn_def, spn_defs in pgn_to_spn_specs.items():
@@ -262,7 +278,7 @@ class PGN129029(PGN):
             # the gang's all here - assemble the payloads
             all_payload_bytes = []
             try:
-                for seq_num in xrange(7):
+                for seq_num in range(7):
                     all_payload_bytes.extend(seq_to_payload[seq_num])
             except KeyError:
                 logging.warning('Couldn\'t find all the keys: ' +
