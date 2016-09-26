@@ -37,7 +37,7 @@ pgn_id,manufacturer,opcode,source_address,pgn_length_bytes,spn_start_position,sp
 65385,Case IH,,144,8,5,16,65385.144.5.,Grain Moisture,Crop moisture content (0.01% per bit),0.01,0,%
 65385,Case IH,,144,8,7,16,65385.144.7.,Work Width,Working width (mm),1,0,mm
 65488,Case IH,,240,8,1,16,65488.240.1.,Grain Flow,Crop mass flow (0.01 gram per second per bit),0.001,0,kg/s
-65377,Case IH,,39,8,1,16,65377.39.1.,Reel Horizontal Position,1.0 mm/bit gain; -1000.0 mm offset,1,"-1,000",mm
+65377,Case IH,,39,8,1,16,65377.39.1.,Reel Horizontal Position,1.0 mm/bit gain; -1000.0 mm offset,1,"-1000",mm
 65377,Case IH,,39,8,3,8,65377.39.3.,Header Type,0 = not defined; 1 = Corn Header; 2 = Grain Header; 3 = Pick-up Header; 4 = Draper Header; 5 = Programmable Header; 6 = Default Header,1,0,
 65377,Case IH,,39,8,7,16,65377.39.7.,Engine Oil Pressure,0.05 bar/bit gain; 0 bar offset,0.05,0,bar
 65380,Case IH,,39,8,1,16,65380.39.1.,Reel Speed,1 rpm/bit gain; 0 offset,1,0,rpm

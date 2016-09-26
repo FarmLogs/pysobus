@@ -14,13 +14,13 @@ class TestParser(unittest.TestCase):
 
     def test_john_deere(self):
         test_file = os.path.join(os.path.dirname(__file__), 'jd.txt')
-        self.run_parse_test(test_file)
+        self.__run_parse_test(test_file)
 
     def test_case(self):
         test_file = os.path.join(os.path.dirname(__file__), 'case.txt')
-        self.run_parse_test(test_file)
+        self.__run_parse_test(test_file)
 
-    def run_parse_test(self, test_file):
+    def __run_parse_test(self, test_file):
         self.assertTrue(os.path.exists(test_file))
         with open(test_file, 'r') as fh:
             for line in fh:
